@@ -1,0 +1,168 @@
+body {
+    background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a);
+    color: white;
+    font-family: sans-serif;
+    padding: 1rem;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+#settings-btn {
+    background: #581c87;
+    border: none;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#settings-panel {
+    background: #1e293b;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+    background: #334155;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+#exercise-card {
+    background: #1e293b;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.exercise-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+#exercise-type {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.cardio { background: #2563eb; }
+.strength { background: #dc2626; }
+.core { background: #16a34a; }
+.power { background: #ea580c; }
+.recovery { background: #6d28d9; }
+
+#timer-display {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#timer-time {
+    font-size: 3.75rem;
+    font-weight: bold;
+}
+
+#rest-indicator {
+    color: #a855f7;
+    font-size: 1.125rem;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    flex: 1;
+    background: linear-gradient(to right, #581c87, #1d4ed8);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+button:hover {
+    background: linear-gradient(to right, #6d28d9, #3b82f6);
+}
+
+#exercise-list {
+    background: #1e293b;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+#exercises-ul {
+    list-style: none;
+    padding: 0;
+}
+
+#exercises-ul li {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s;
+}
+
+.current {
+    background: #581c87;
+}
+
+.completed {
+    background: #334155;
+    opacity: 0.5;
+}
+
+.pending {
+    background: #334155;
+}
+
+.install-instructions {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #1e293b;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    color: #cbd5e1;
+}
