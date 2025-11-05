@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocal Trainer PWA</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <!-- For PWA installability -->
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Vocal Trainer">
+    <link rel="apple-touch-icon" href="logo192.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vocal Trainer</h1>
+            <p id="workout-name"></p>
+            <button id="settings-btn">⚙️ Settings</button>
+        </header>
+
+        <div id="settings-panel" class="hidden">
+            <h3>Settings</h3>
+            <label>
+                Voice Enabled
+                <input type="checkbox" id="voice-enabled" checked>
+            </label>
+            <label>
+                Voice Speed: <span id="voice-speed-value">1.0x</span>
+                <input type="range" id="voice-speed" min="0.5" max="1.5" step="0.1" value="1.0">
+            </label>
+            <label>
+                Voice Selection
+                <select id="voice-select"></select>
+            </label>
+            <label>
+                Use High-Quality TTS (Google)
+                <input type="checkbox" id="use-high-quality">
+            </label>
+            <input type="text" id="api-key" placeholder="Google API Key" class="hidden">
+            <label>
+                Select Workout Day
+                <select id="day-select"></select>
+            </label>
+        </div>
+
+        <div id="exercise-card">
+            <div class="exercise-header">
+                <h2 id="exercise-name"></h2>
+                <span id="exercise-type"></span>
+            </div>
+            <div class="exercise-details">
+                <p id="exercise-reps"></p>
+                <p id="exercise-duration"></p>
+            </div>
+            <div id="timer-display" class="hidden">
+                <h2 id="timer-time">00:00</h2>
+                <p id="rest-indicator" class="hidden">Rest Period</p>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class="hidden">▶️ Start Exercise</button>
+                <button id="pause-resume-btn" class="hidden">⏸️ Pause</button>
+                <button id="next-btn" class="hidden">⏭️ Next</button>
+            </div>
+        </div>
+
+        <div id="exercise-list">
+            <h3>Today's Workout</h3>
+            <ul id="exercises-ul"></ul>
+        </div>
+
+        <div class="install-instructions">
+            <p>📱 Install as App: On iPhone, tap Share → Add to Home Screen</p>
+            <p>For best experience, grant microphone permissions and enable audio in Settings.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="service-worker.js"></script>
+</body>
+</html>
